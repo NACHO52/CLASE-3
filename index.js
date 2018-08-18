@@ -105,32 +105,54 @@
 //   return num1  + num2;
 // }
 
-// function isPrimo(num)
+// function promedio(lista)
 // {
-//   var a = 2;
-//   if(division(num, a) > a)
+//   var sum = 0;
+//   for(var a = 0; a < lista.length; a++)
 //   {
-//     division(num, a+1)
+//     sum += lista[a];
 //   }
-// }
-
-// function division(num1, num2)
-// {
-//   return num1 / num2;
+//   var result = sum / lista.length;
+//   console.log(result);
 // }
 
 
-function promedio(lista)
+// var examResults = [ 7, 5, 6, 4, 3, 2, 8 ];
+// console.log(promedio(examResults));
+
+var numero = parseInt(prompt('Ingrese un número.'));
+
+console.log(isPrimo(numero));
+
+function isPrimo(param)
 {
-  var sum = 0;
-  for(var a = 0; a < lista.length; a++)
+  if(param < 1)
   {
-    sum += lista[a];
+    return 'Por favor ingrese un número mayor a cero.';
   }
-  var result = sum / lista.length;
-  console.log(result);
+  var count = 2;
+  var rest = 0;
+  if(param === 2) 
+  {
+    return 'Es primo';
+  } 
+  else 
+  {
+    while(count != param)
+    {
+      rest = param % count;
+      if(rest === 0)
+      {
+        return 'Es compuesto';
+      }
+      else
+      {
+        count++;
+        if(param === count)
+        {
+          return 'Es primo';
+        }
+      }
+    }
+  }
 }
-
-
-var examResults = [ 7, 5, 6, 4, 3, 2, 8 ];
-console.log(promedio(examResults));
