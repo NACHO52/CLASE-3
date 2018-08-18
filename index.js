@@ -27,18 +27,18 @@
 // }while(value <= 5);
 // console.log(value);
 
-var daysOfTheWeek = [
-  'Lunes',
-  'Martes',
-  'Miércoles',
-  'Miercoles',
-  'Jueves',
-  'Viernes',
-  'Sábado',
-  'Sabado',
-  'Domingo',
-  'Pato'
-]
+// var daysOfTheWeek = [
+//   'Lunes',
+//   'Martes',
+//   'Miércoles',
+//   'Miercoles',
+//   'Jueves',
+//   'Viernes',
+//   'Sábado',
+//   'Sabado',
+//   'Domingo',
+//   'Pato'
+// ]
 // var day = prompt("Ingrese un día.").toLowerCase();
 // for(var a = 0; a <= daysOfTheWeek.length; a++)
 // {
@@ -89,4 +89,48 @@ var daysOfTheWeek = [
 //   }
 // }
 
+// function saludo()
+// {
+//   return "Hola!";
+// }
+// console.log(saludo());
 
+
+// function calcular(num1, num2){
+//   var result = num1 + num2
+//   if(result > 10)
+//   {
+//     return calcular();
+//   }
+//   return num1  + num2;
+// }
+
+// function isPrimo(num)
+// {
+//   var a = 2;
+//   if(division(num, a) > a)
+//   {
+//     division(num, a+1)
+//   }
+// }
+
+// function division(num1, num2)
+// {
+//   return num1 / num2;
+// }
+
+
+function promedio(lista)
+{
+  var sum = 0;
+  for(var a = 0; a < lista.length; a++)
+  {
+    sum += lista[a];
+  }
+  var result = sum / lista.length;
+  console.log(result);
+}
+
+
+var examResults = [ 7, 5, 6, 4, 3, 2, 8 ];
+console.log(promedio(examResults));
